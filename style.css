@@ -1,0 +1,77 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --fonte-cartao: "SF Pro Display", "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont;
+    --fonte-letra: "Inter", sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vw;
+}
+
+#cartao>img {
+    width: 100vw;
+    height: 22rem;
+}
+
+#cartao .card-back {
+    position: absolute;
+    bottom: 70%;
+    left: 20%;
+}
+
+#cartao .card-front {
+    position: absolute;
+    bottom: 56%;
+    left: 5%;
+}
+
+#info-card {
+
+    color: white;
+    font-family: var(--fonte-letra);
+    
+}
+
+#info-card p.number {
+    position: absolute;
+    left: 10%;
+    bottom: 64%;
+    word-spacing: 10px;
+    font-size: 2rem;
+}
+
+#info-card p.exp-date {
+    position: absolute;
+    left: 10%;
+    bottom: 59%;
+    font-size: 1.2rem;
+}
+
+#info-card p.cvc1 {
+    position: absolute;
+    left: 63%;
+    bottom: 59%;
+    font-size: 1.2rem;
+}
+#info-card p.cvc2 {
+    position: absolute;
+    left: 68%;
+    bottom: 59%;
+    font-size: 1.2rem;
+}
+#cartao .card-logo {
+    position: absolute;
+    left: 10%;
+    bottom: 74%;
+}
+
+#dados-cartao {
+    margin-top: 8rem;
+    border: 2px dashed red;
+}
