@@ -12,41 +12,51 @@
 <body>
     <main>
         <section id="cartao">
-            <img src="images/bg-main-mobile.png" alt="bg main mobile">
-            <div class="card-back"><img src="images/bg-card-back.png" alt="Card back"></div>
-            <div class="card-front"><img src="images/bg-card-front.png" alt="Card front"></div>
-            <div class="card-logo"><img src="images/card-logo.svg" alt="Card logo"></div>
-        </section>
+            <div class="card-icon">
+                <div class="card-back"><img src="images/bg-card-back.png" alt="Card back"></div>
+                <div class="card-front"><img src="images/bg-card-front.png" alt="Card front"></div>
+                <div class="card-logo"><img src="images/card-logo.svg" alt="Card logo"></div>
+            </div>
+        
         <div id="info-card">
             <p class="number">0000 0000 0000 0000</p>
             <p class="exp-date">Jane Appleseed</p>
             <p class="cvc1">00/</p>
             <p class="cvc2">00</p>
         </div>
+        </section>
         <section id="dados-cartao">
-            <form action="post">
-                <section id="cardholder-principal">
-                    <div class="cardholder-text"><label for="cardholder">Cardholder Name</label></div>
-                    <div class="cardholder-input"><input type="text" name="cardholder" id="cardholder"
-                            placeholder="e.g. Jane Appleseed"></div>
-                </section>
-                <section id="card-number-principal">
-                    <div class="card-text"><label for="card">Card Number</label></div>
-                    <div class="card-input"><input type="number" name="card" id="card"
-                            placeholder="e.g. 1234 5678 9123 0000"></div>
-                </section>
-                <section id="resto-info-text">
-                    <div class="resto-info-text-exp"><label for="exp">Exp. Date (MM/YY)</label></div>
-                    <div class="resto-info-text-cvc"><label for="cvc">Cvc</label></div>
+            <form-wrapper>
+                <form action="#" get="post">
+                    <section>
+                        <div class="text-top"><label for="cardholder">Cardholder Name</label></div>
+                        <div class="input-deco"><input type="text" name="cardholder" id="cardholder"
+                                placeholder="e.g. Jane Appleseed" required></div>
                     </section>
-                    <section id="resto-info-input">
-                        <div class="resto-info-input-exp"><input type="number" name="exp" id="exp" size="2" placeholder="MM"></div>
-                        <div class="resto-info-input-exp2"><input type="number" name="exp2" id="exp2" size="2" placeholder="YY"></div>
-                        <div class="resto-info-input-cvc"><input type="number" name="cvc" id="cvc" size="3" placeholder="e.g. 123"></div>
+                    <section>
+                        <div class="text-top"><label for="card">Card Number</label></div>
+                        <div class="input-deco"><input type="number" name="card" id="card"
+                                placeholder="e.g. 1234 5678 9123 0000" required>
+                            </div>
                     </section>
-                    <button class="confirm">Confirm</button>
+                    <section>
+                        <div id="resto-info-text">
+                            <label for="exp">Exp. Date (MM/YY)</label>
+                            <label for="cvc">Cvc</label>
+                        </div>
+                    </section>
+                    <section>
+                        <div id="resto-info-input">
+                            <input type="number" name="exp" id="exp" size="2" placeholder="MM" required class="exp-date">
+                            <input type="number" name="exp2" id="exp2" size="2" placeholder="YY" required class="exp-date">
+                            <input type="number" name="cvc" id="cvc" size="3" placeholder="e.g. 123" required class="cvc">
+                        </div>
+            </form-wrapper>
+                </section>
+                
             </form>
         </section>
+        <button class="confirm">Confirm</button>
     </main>
 </body>
 <script src="script.js"></script>
