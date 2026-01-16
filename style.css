@@ -21,9 +21,10 @@ input {
 
 #cartao {
     background-image: url(images/bg-main-mobile.png);
-    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 22rem;
-    display: block;
+
 }
 
 #cartao .card-back {
@@ -83,7 +84,7 @@ input {
     font-size: 1rem;
     text-transform: uppercase;
     opacity: 1;
-    
+
 }
 
 #dados-cartao section {
@@ -130,21 +131,100 @@ button.confirm {
     font-size: 1.5rem;
     border: none;
     color: white;
-    background-color:#22092F;
+    background-color: #22092F;
     border-radius: 10px;
-    
+    cursor: pointer;
+
+}
+
+.off {
+    display: none;
 }
 
 button.confirm:hover {
-    background-color:#44135e ;
+    background-color: #44135e;
 }
 
 @media screen and (min-width: 650px) {
+
+    main {
+        display: flex;
+        align-items: center;
+    }
+
     #cartao {
-    background-image: url(images/bg-main-desktop.png);
-    background-repeat: no-repeat;
-    width: 10%;
-    height:100vh;
+        background-image: url(images/bg-main-desktop.png);
+        background-repeat: no-repeat;
+        width: 30%;
+        height: 100vh;
+    }
+
+    #dados-cartao {
+        margin-left: 20%;
+        margin-bottom: 6%;
+    }
+
+    .card-icon .card-logo {
+        transform: translate(8.5rem, 4rem);
+    }
+
+    .card-icon .card-back {
+        transform: translateY(30rem);
+    }
+
+    .card-icon .card-front {
+        transform: translate(12rem, 4rem);
+    }
+
+    #info-card .number {
+        transform: translate(8.4rem, 3.5rem);
+    }
+
+    #info-card .exp-date {
+        transform: translate(8.4rem, 3.5rem);
+    }
+
+    #info-card .cvc1 {
+        transform: translate(-34rem, 3.5rem);
+    }
+
+    #info-card .cvc2 {
+        transform: translate(-37.9rem, 3.5rem);
+    }
 }
 
+.success {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.success .icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, #6448FE, #600594);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success h2 {
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.success p {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.success button {
+    padding: 15px;
+    width: 100%;
+    background: #22092F;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
